@@ -11,6 +11,13 @@
   min-width: 75vh;
 }
 
+.pBlog {
+  font-size: 10px;
+  color: black;
+  opacity: 75%;
+  background-color: #f6ad55;
+}
+
 .profile{
   min-width: 15%;
   border: 1px solid #dcdcdc;
