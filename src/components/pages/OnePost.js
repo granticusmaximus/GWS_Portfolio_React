@@ -58,7 +58,7 @@ export default function OnePost() {
                   {postData.name}
                 </h4>
                 <h5 className="cursive flex items-center pl-2 text-2xl">
-                 {moment(postData.publishedAt).format('MM/DD/YYYY')}
+                  {moment(postData.publishedAt).format('MM-DD-YY')}
                 </h5>
               </div>
             </div>

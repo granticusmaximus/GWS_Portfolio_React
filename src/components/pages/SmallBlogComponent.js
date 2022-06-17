@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Card } from 'react-bootstrap'
 import sanityClient from "../../client.js";
 import Pagination from "react-sanity-pagination";
 
@@ -19,6 +18,7 @@ const SmallBlogComponent = () => {
           body,
           excert,
           author,
+          publishedAt,
           mainImage {
               asset -> {
                   _id,
@@ -26,7 +26,7 @@ const SmallBlogComponent = () => {
               },
               alt
             }
-        }`
+        } | order(publishedAt desc)`
       )
       .then(data => { itemsToSend.push(...data) })
       .catch(console.error);
@@ -54,7 +54,7 @@ const SmallBlogComponent = () => {
               </span>
             </span>
           </Link>
-          ))}
+        ))}
         <center>
           <Pagination
             nextButton={true}
