@@ -1,4 +1,4 @@
-import {Card, Row } from 'react-bootstrap'
+import { Card, Row } from 'react-bootstrap'
 import ProfileSideBar from './ProfileSideBar'
 import * as ROUTES from '../../constants/routes'
 
@@ -15,11 +15,11 @@ function Profile() {
                 <div className='col-md-3'>
                     <div className='adminCard'>
                         <Card.Body>
-                            <Card.Title>Create/View Tasks</Card.Title>
+                            <Card.Title>View Tasks</Card.Title>
                             <Card.Text>
-                                Wanting to view or create a simple To-Do list? 
-                                <hr/>
-                                <a href={ROUTES.TASKS} className='btn btn-outline-primary'>Click Here</a>
+                                Click below to view tasks
+                                <hr />
+                                <a className='btn btn-outline-success' href={ROUTES.TASK_LIST}>Click Here</a>
                             </Card.Text>
                         </Card.Body>
                     </div>

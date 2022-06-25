@@ -23,6 +23,7 @@ import PrivateRoute from './components/pages/PrivateRoute'
 import { Navigate } from 'react-router-dom'
 import TaskManager from './components/pages/Tasks/TaskManager'
 
+
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
   const [timeActive, setTimeActive] = useState(false)
@@ -47,8 +48,8 @@ function App() {
             <Route path={ROUTES.BLOG} element={<AllPosts />} />
             <Route path={ROUTES.SINGLE_POST} element={<OnePost />} />
             <Route path={ROUTES.THANK_YOU} element={<ThankYou />} />
-            <Route path={ROUTES.TASKS} element={<TaskManager />} />
-            <Route path={ROUTES.ACCOUNT} element={
+            <Route path={ROUTES.TASK_LIST} element={<TaskManager/>} />
+            <Route path={ROUTES.PROFILE} element={
               <PrivateRoute>
                 <Profile />
               </PrivateRoute>
@@ -56,12 +57,12 @@ function App() {
             <Route path={ROUTES.LOGIN} element={
               !currentUser?.emailVerified
                 ? <Login />
-                : <Navigate to={ROUTES.ACCOUNT} replace />
+                : <Navigate to={ROUTES.PROFILE} replace />
             } />
             <Route path={ROUTES.REGISTER} element={
               !currentUser?.emailVerified
                 ? <Register />
-                : <Navigate to={ROUTES.ACCOUNT} replace />
+                : <Navigate to={ROUTES.PROFILE} replace />
             } />
             <Route path={ROUTES.VERIFY_EMAIL} element={<VerifyEmail />} />
 
@@ -74,5 +75,8 @@ function App() {
     </div>
   );
 }
+
+
+
 
 export default App;

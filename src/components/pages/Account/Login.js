@@ -34,6 +34,9 @@ function Login() {
 
     return (
         <div className='center'>
+            <br />
+            <br />
+            <br />
             <div className='auth'>
                 <h1>Log in</h1>
                 {error && <div className='auth__error'>{error}</div>}

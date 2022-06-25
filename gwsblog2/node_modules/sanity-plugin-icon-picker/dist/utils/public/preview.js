@@ -1,0 +1,25 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = _default;
+
+var _providers = _interopRequireDefault(require("../../providers"));
+
+function _default(_ref) {
+  var provider = _ref.provider,
+      name = _ref.name;
+  if (!provider) return null;
+
+  var icons = _providers["default"][provider]();
+
+  var found = icons.find(function (icon) {
+    return icon.tags.some(function (tag) {
+      return tag === name;
+    });
+  });
+  return found === null || found === void 0 ? void 0 : found.component();
+}

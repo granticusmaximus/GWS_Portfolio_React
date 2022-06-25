@@ -1,6 +1,7 @@
 import Modal from "../../UI/Modal"
 
 function TaskItem({ onClose, open, title, description }) {
+
     return (
         <Modal modalLable='Task Item' onClose={onClose} open={open}>
             <div className='taskItem'>
@@ -10,4 +11,5 @@ function TaskItem({ onClose, open, title, description }) {
         </Modal>
     )
 }
+
 export default TaskItem

@@ -37,8 +37,6 @@ const SmallBlogComponent = () => {
     setAllPosts(items);
   }
 
-  const MAX_LENGTH = 150;
-
   return (
     <div className="bg-green-100 min-h p-12">
       <div className="container mx-auto">
