@@ -15,7 +15,7 @@ const Footer = () => {
               (478) 733-5239
             </p>
             <p>
-              info@grantwatson.dev
+              gwatson117@gmail.com
             </p>
               
            

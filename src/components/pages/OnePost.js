@@ -3,24 +3,22 @@ import { useParams } from "react-router-dom"
 import sanityClient from "../../client.js"
 import BlockContent from "@sanity/block-content-to-react"
 import imageUrlBuilder from "@sanity/image-url"
-import moment from 'moment'
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
   return builder.image(source);
 }
 
-
 export default function OnePost() {
   const [postData, setPostData] = useState(null);
   const { slug } = useParams();
+
   useEffect(() => {
     sanityClient
       .fetch(
         `*[slug.current == "${slug}"]{
             title,
             slug,
-            publishedAt,
             mainImage{
               asset->{
                 _id,
@@ -40,7 +38,7 @@ export default function OnePost() {
 
   return (
     <div className="bg-gray-200 min-h-screen p-12">
-      <div className="container shadow-lg mx-auto bg-orange-100 rounded-lg">
+      <div className="container shadow-lg mx-auto bg-green-100 rounded-lg">
         <div className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
             {/* Title Section */}
@@ -57,9 +55,6 @@ export default function OnePost() {
                 <h4 className="cursive flex items-center pl-2 text-2xl">
                   {postData.name}
                 </h4>
-                <h5 className="cursive flex items-center pl-2 text-2xl">
-                  {moment(postData.publishedAt).format('MM-DD-YY')}
-                </h5>
               </div>
             </div>
           </div>

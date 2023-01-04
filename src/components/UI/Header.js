@@ -36,11 +36,11 @@ class Header extends Component {
             {
               color: 'white',
               backgroundColor: '#5a523e',
-              padding: '10px'
+              padding: '9px'
             }
           }
         >
-          If you have not guessed it, my name is Grant Watson and I am a freelance software engineer for hire. To see my resume:
+          My name is Grant Watson and I am a freelance software engineer for hire. To see my resume:
         </h2>
         <a href={pdf} rel="noreferrer" target="_blank" className="btn btn-primary">Click Here</a>
     </article>
