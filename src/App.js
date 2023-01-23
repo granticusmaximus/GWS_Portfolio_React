@@ -1,6 +1,5 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'rsuite/styles/index.less'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import * as ROUTES from './components/constants/routes'
 import NavMenu from './components/UI/NavMenu'
@@ -18,12 +17,16 @@ import Dashboard from './components/pages/Account/Dashboard'
 import Login from './components/pages/auth/Login'
 import Register from './components/pages/auth/Register'
 import Reset from './components/pages/auth/Reset'
-import CreateNote from './components/pages/Notes/CreateNote'
-import NoteList from './components/pages/Notes/NoteList'
+import NoteManager from './components/pages/Notes/NoteManager'
+import AddNote from './components/pages/Notes/AddNote'
+import EditNote from './components/pages/Notes/EditNote'
+import TaskManager from './components/pages/Tasks/TaskManager'
+import AddTask from './components/pages/Tasks/AddTask'
+import EditTask from './components/pages/Tasks/EditTask'
 
 function App() {
   return (
-    <div>
+    <div class='app'>
       <br />
       <NavMenu />
       <Router>
@@ -41,8 +44,12 @@ function App() {
           <Route path={ROUTES.REGISTER} element={<Register />} />
           <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.RESET} element={<Reset />} />
-          <Route path={ROUTES.CREATE_NOTE} element={<CreateNote />} />
-          <Route path={ROUTES.NOTESLIST} element={<NoteList />} />
+          <Route path={ROUTES.NOTE_LIST} element={<NoteManager />} />
+          <Route path={ROUTES.ADD_NOTE} element={<AddNote />} />
+          <Route path={ROUTES.EDIT_NOTE} element={<EditNote />} />
+          <Route path={ROUTES.TODO} element={<TaskManager />} />
+          <Route path={ROUTES.ADD_TASK} element={<AddTask />} />
+          <Route path={ROUTES.EDIT_TASK} element={<EditTask />} />
         </Routes>
       </Router>
       <div className='bottom'>

@@ -11,29 +11,40 @@ import adelsa from '../../assets/img/adelsa.png'
 import carbud from '../../assets/img/carbuddys.png'
 import crm from '../../assets/img/crmasp.png'
 import cycle from '../../assets/img/cycleexchange.jpeg'
-
+import logo from '../../assets/img/logo.png'
+import gwstodo from '../../assets/img/gwstodo.png'
+import {Helmet} from "react-helmet"
 
 function Portfolio(props) {
   return (
+    <>
+    <Helmet>
+        <title>GWS : Porfolio</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="csrf_token" content="" />
+        <meta property="type" content="website" />
+        <meta property="og:image" content={logo} data-react-helmet="true"/>
+        <meta property="og:image:secure_url" content={logo} data-react-helmet="true"/>
+     </Helmet>
     <div className='container'>
       <br />
       <div className='work'>
-        <center>
-          <h1>Projects</h1>
-        </center>
+          <div class="sec-title">
+            <div class="title">GWS Portfolio</div>
+            <p>This is not an extensive list, but a few of the projects that I have worked on in the past </p>
+          </div>
         <Row>
           <div className='col-md-4'>
             <div className='portfolioCard'>
-              <center><img src={reedy} alt="Reedville Goods Website" /></center>
+              <center><img src={gwstodo} alt="React ToDo App" /></center>
               <div className='portfolioCard-header'>
-                Project 1 (Reedyville Goods)
+                Project 1 (React ToDo App)
               </div>
               <div className='portfolioCard-content'>
-                Garage Art Sales needed help with their administrative dashboard as well as their
-                need for help with their ordering system used for drop shippers/wholesalers and
-                other customers. The application uses PHP for the store and VUE.JS for the dashboard.
+                This application is built with React from the front end and Firebase for the database. 
               </div>
-              &nbsp;<a href='https://reedyvillegoods.com/' target="_blank" className='btn btn-success'>Demo</a>
+              &nbsp;<a href='http://todo.gwsapp.net/' target="_blank" className='btn btn-success'>Demo</a>
             </div>
           </div>
           <div className='col-md-4'>
@@ -168,22 +179,26 @@ function Portfolio(props) {
               </div>
             </div>
           </div>
+          
           <div className='col-md-4'>
             <div className='portfolioCard'>
-              <center center><img src={cycle} /></center>
+              <center><img src={reedy} alt="Reedville Goods Website" /></center>
               <div className='portfolioCard-header'>
-                Project 12 (Cycle Exchange)
+                Project 12 (Reedyville Goods)
               </div>
               <div className='portfolioCard-content'>
-                UI/UX Design built while at Wayne Reaves Software
-                Backend was Ruby on Rails/ Frontend tech used was HTML, jQuery, CSS, Ractive
+                Garage Art Sales needed help with their administrative dashboard as well as their
+                need for help with their ordering system used for drop shippers/wholesalers and
+                other customers. The application uses PHP for the store and VUE.JS for the dashboard.
               </div>
+              &nbsp;<a href='https://reedyvillegoods.com/' target="_blank" className='btn btn-success'>Demo</a>
             </div>
           </div>
         </Row>
         <hr />
       </div>
     </div>
+    </>
   )
 }
 

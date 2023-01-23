@@ -83,78 +83,6 @@ const logout = () => {
     signOut(auth);
 };
 
-function getAllNoteItems() {
-    return new Promise((resolve, reject) => {
-        db.collection("notes").get().then((allNoteItems) => {
-            resolve(allNoteItems);
-        }).catch((e) => {
-            reject(e);
-        })
-    })
-}
-
-function getAllNoteCategories() {
-    return new Promise((resolve, reject) => {
-        db.collection("NoteCategories").get().then((allNoteCategories) => {
-            resolve(allNoteCategories);
-        }).catch((e) => {
-            reject(e);
-        })
-    })
-}
-
-function AddNewNoteItem(title, category, content, dateAdded) {
-    return new Promise((resolve, reject) => {
-        const data = {
-            "title": title,
-            "category": category,
-            "content": content,
-            "dateAdded": dateAdded
-        }
-        addDoc(collection(db, "notes"), {
-            nid: data.uid,
-            title,
-            category,
-            content,
-            dateAdded
-        });
-        db.collection("notes").add(data).then((docRef) => {
-            resolve(docRef);
-        }).catch((e) => {
-            reject(e);
-        })
-
-    })
-}
-
-function UpateNoteItem(noteItemID, title, category, content) {
-
-    return new Promise((resolve, reject) => {
-
-        const data = {
-            "title": title,
-            "category": category,
-            "content": content
-        }
-
-        db.collection("notes").doc(noteItemID).update(data).then(() => {
-            resolve()
-        }).catch((e) => {
-            reject(e)
-        })
-    })
-}
-
-function DeleteNoteItem(noteItemID) {
-    return new Promise((resolve, reject) => {
-        db.collection("notes").doc(noteItemID).delete().then(() => {
-            resolve()
-        }).catch((e) => {
-            reject(e)
-        })
-    })
-}
-
 export {
     auth,
     db,
@@ -163,9 +91,4 @@ export {
     registerWithEmailAndPassword,
     sendPasswordReset,
     logout,
-    getAllNoteItems,
-    DeleteNoteItem,
-    UpateNoteItem,
-    AddNewNoteItem,
-    getAllNoteCategories,
 };
