@@ -13,6 +13,8 @@ import crm from '../../assets/img/crmasp.png'
 import cycle from '../../assets/img/cycleexchange.jpeg'
 import logo from '../../assets/img/logo.png'
 import gwstodo from '../../assets/img/gwstodo.png'
+import note from '../../assets/img/note_man.png'
+import { ImageViewer } from "react-image-viewer-dv"
 import {Helmet} from "react-helmet"
 
 function Portfolio(props) {
@@ -37,21 +39,45 @@ function Portfolio(props) {
         <Row>
           <div className='col-md-4'>
             <div className='portfolioCard'>
-              <center><img src={gwstodo} alt="React ToDo App" /></center>
+              <center>
+                <ImageViewer>
+                  <img src={gwstodo} alt="React ToDo App" />
+                </ImageViewer>
+              </center>
               <div className='portfolioCard-header'>
                 Project 1 (React ToDo App)
               </div>
               <div className='portfolioCard-content'>
-                This application is built with React from the front end and Firebase for the database. 
+                This ToDo application is built with React from the front end and Firebase for the database. 
               </div>
               &nbsp;<a href='http://todo.gwsapp.net/' target="_blank" className='btn btn-success'>Demo</a>
             </div>
           </div>
           <div className='col-md-4'>
             <div className='portfolioCard'>
-            <center><img src={viral} alt="Viral Theme"/></center>
+            <center>
+              <ImageViewer>
+                <img src={note} alt="React Notes App"/>
+              </ImageViewer>
+            </center>
               <div className='portfolioCard-header'>
-                Project 2 (Viral Theme)
+                Project 2 (React Notes App)
+              </div>
+              <div className='portfolioCard-content'>
+                This ToDo application is built with React from the front end and Firebase for the database. 
+              </div>
+              &nbsp;<a href='http://notes.gwsapp.net/' target="_blank" className='btn btn-success'>Demo</a>
+            </div>
+          </div>
+          <div className='col-md-4'>
+            <div className='portfolioCard'>
+            <center>
+              <ImageViewer>
+                <img src={viral} alt="Viral Theme"/>
+              </ImageViewer>
+            </center>
+              <div className='portfolioCard-header'>
+                Project 3 (Viral Theme)
               </div>
               <div className='portfolioCard-content'>
                 This is an HTML and JavaScript theme. Some of the basic tools that I have utilized
@@ -63,9 +89,13 @@ function Portfolio(props) {
           </div>
           <div className='col-md-4'>
             <div className='portfolioCard'>
-              <center center><img src={aros} alt="Aros Theme"/></center>
+              <center center>
+                <ImageViewer>
+                  <img src={aros} alt="Aros Theme"/>
+                </ImageViewer>
+              </center>
               <div className='portfolioCard-header'>
-                Project 3 (Aros Theme)
+                Project 4 (Aros Theme)
               </div>
               <div className='portfolioCard-content'>
                 This is an HTML and JavaScript theme. Some of the basic tools that I have utilized
@@ -75,13 +105,15 @@ function Portfolio(props) {
               &nbsp;<a href='https://aros-theme.netlify.app/index.html' target="_blank" className='btn btn-success'>Demo</a>
             </div>
           </div>
-        </Row>
-        <Row>
           <div className='col-md-4'>
             <div className='portfolioCard'>
-              <center><img src={quizify} alt="Quizlify JS App"/></center>
+              <center>
+                <ImageViewer>
+                  <img src={quizify} alt="Quizlify JS App"/>
+                </ImageViewer>
+              </center>
               <div className='portfolioCard-header'>
-                Project 4 (Quizify JS App)
+                Project 5 (Quizify JS App)
               </div>
               <div className='portfolioCard-content'>
                 A quiz taking application built with HTML5, CSS and JavaScript. Questions are provided by www.opendb.com.
@@ -91,9 +123,13 @@ function Portfolio(props) {
           </div>
           <div className='col-md-4'>
             <div className='portfolioCard'>
-            <center><img src={globalU} alt="Global U Theme"/></center>
+            <center>
+              <ImageViewer>
+                <img src={globalU} alt="Global U Theme"/>
+              </ImageViewer>
+            </center>
               <div className='portfolioCard-header'>
-                Project 5 (Global U)
+                Project 6 (Global U)
               </div>
               <div className='portfolioCard-content'>
                 This application was a theme built for WordPress. I needed to convert the
@@ -103,9 +139,13 @@ function Portfolio(props) {
           </div>
           <div className='col-md-4'>
             <div className='portfolioCard'>
-              <center center><img src={reactApp} /></center>
+              <center center>
+                <ImageViewer>
+                  <img src={reactApp} />
+                </ImageViewer>
+              </center>
               <div className='portfolioCard-header'>
-                Project 6 (React App)
+                Project 7 (React Portfolio App)
               </div>
               <div className='portfolioCard-content'>
                 It all begins with an idea. This idea began to teach myself more about ReactJS as well as
@@ -115,13 +155,15 @@ function Portfolio(props) {
               &nbsp;<a href='https://lucid-lewin-e9e4a3.netlify.app/' target="_blank" className='btn btn-success'>Demo</a>
             </div>
           </div>
-        </Row>
-        <Row>
           <div className='col-md-4'>
             <div className='portfolioCard'>
-              <center><img src={quizify} /></center>
+              <center>
+                <ImageViewer>
+                  <img src={quizify} />
+                </ImageViewer>
+              </center>
               <div className='portfolioCard-header'>
-                Project 7 (Quizify JS App)
+                Project 8 (Quizify JS App)
               </div>
               <div className='portfolioCard-content'>
                 A quiz taking application built with HTML5, CSS and JavaScript. Questions are provided by www.opendb.com.
@@ -131,9 +173,13 @@ function Portfolio(props) {
           </div>
           <div className='col-md-4'>
             <div className='portfolioCard'>
-            <center><img src={ultimate} /></center>
+            <center>
+              <ImageViewer>
+                <img src={ultimate} />
+              </ImageViewer>
+            </center>
               <div className='portfolioCard-header'>
-                Project 8 (Ultimate Power Truck)
+                Project 9 (Ultimate Power Truck)
               </div>
               <div className='portfolioCard-content'>
                 UI/UX Design built while at Wayne Reaves Software
@@ -143,9 +189,11 @@ function Portfolio(props) {
           </div>
           <div className='col-md-4'>
             <div className='portfolioCard'>
-              <center center><img src={adelsa} /></center>
+              <ImageViewer>
+                  <img src={adelsa} />
+              </ImageViewer>
               <div className='portfolioCard-header'>
-                Project 9 (Adelsa Auto)
+                Project 10 (Adelsa Auto)
               </div>
               <div className='portfolioCard-content'>
                 UI/UX Design built while at Wayne Reaves Software
@@ -153,13 +201,15 @@ function Portfolio(props) {
               </div>
             </div>
           </div>
-        </Row>
-        <Row>
           <div className='col-md-4'>
             <div className='portfolioCard'>
-              <center><img src={crm} /></center>
+              <center>
+                <ImageViewer>
+                  <img src={crm} />
+                </ImageViewer>
+              </center>
               <div className='portfolioCard-header'>
-                Project 10 (ASP.NET App)
+                Project 11 (ASP.NET App)
               </div>
               <div className='portfolioCard-content'>
                 A CRM app built in ASP.NET
@@ -169,9 +219,13 @@ function Portfolio(props) {
           </div>
           <div className='col-md-4'>
             <div className='portfolioCard'>
-            <center><img src={carbud} /></center>
+            <center>
+              <ImageViewer>
+                <img src={carbud} />
+              </ImageViewer>
+            </center>
               <div className='portfolioCard-header'>
-                Project 11 (Car Buddys)
+                Project 12 (Car Buddys)
               </div>
               <div className='portfolioCard-content'>
                 UI/UX Design built while at Wayne Reaves Software
@@ -179,12 +233,15 @@ function Portfolio(props) {
               </div>
             </div>
           </div>
-          
           <div className='col-md-4'>
             <div className='portfolioCard'>
-              <center><img src={reedy} alt="Reedville Goods Website" /></center>
+            <center>
+              <ImageViewer>
+                <img src={reedy} alt="Reedville Goods Website" />
+              </ImageViewer>
+            </center>
               <div className='portfolioCard-header'>
-                Project 12 (Reedyville Goods)
+                Project 13 (Reedyville Goods)
               </div>
               <div className='portfolioCard-content'>
                 Garage Art Sales needed help with their administrative dashboard as well as their
@@ -192,6 +249,20 @@ function Portfolio(props) {
                 other customers. The application uses PHP for the store and VUE.JS for the dashboard.
               </div>
               &nbsp;<a href='https://reedyvillegoods.com/' target="_blank" className='btn btn-success'>Demo</a>
+            </div>
+          </div>
+          <div className='col-md-4'>
+            <div className='portfolioCard'>
+            <ImageViewer>
+                <img src={cycle} alt="Cycle Exchange" />
+              </ImageViewer>
+              <div className='portfolioCard-header'>
+                Project 14 (Cycle Exchange)
+              </div>
+              <div className='portfolioCard-content'>
+                UI/UX Design built while at Wayne Reaves Software
+                Backend was Ruby on Rails/ Frontend tech used was HTML, jQuery, CSS, Ractive
+              </div>
             </div>
           </div>
         </Row>

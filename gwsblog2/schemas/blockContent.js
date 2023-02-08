@@ -20,6 +20,7 @@ export default {
       // correspond with HTML tags, but you can set any title or value
       // you want and decide how you want to deal with it where you want to
       // use your content.
+      
       styles: [
         { title: 'Normal', value: 'normal' },
         { title: 'H1', value: 'h1' },
@@ -36,7 +37,6 @@ export default {
         decorators: [
           { title: 'Strong', value: 'strong' },
           { title: 'Emphasis', value: 'em' },
-          { title: 'Code', value: 'code' },
           { title: "Underline", value: "underline" },
           { title: "Strike", value: "strike-through" }
         ],
@@ -57,23 +57,6 @@ export default {
         ],
       },
     },
-    {
-      title: "Icon",
-      name: "icon",
-      type: "iconPicker",
-      options: {
-        providers: ["f7", "fa", "mdi", "sa", "hi", "fi"],
-        outputFormat: 'react',
-
-      }
-    },
-    {
-      type: "code",
-      title: "Code block",
-      options: {
-        theme: 'solarized_dark',
-      }
-    },
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
@@ -81,5 +64,8 @@ export default {
       type: 'image',
       options: { hotspot: true },
     },
+    {
+      type: 'code'
+    }
   ],
 }

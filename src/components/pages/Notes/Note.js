@@ -1,20 +1,20 @@
 import {useState} from 'react'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import NoteItem from './NoteItem'
 import EditNote from './EditNote'
 import { doc, deleteDoc} from "firebase/firestore";
 import {db} from "../../../services/fb_commands"
+import Draggable from 'react-draggable';
 
 function Note({id, title, category, content}) {
+  const [modal, setModal] = useState(false);
+  const toggle = () => setModal(!modal);
 
-  const [open, setOpen] = useState({edit:false, view:false})
+  const [editModal, setEditModal] = useState(false);
+  const neToggle = () => setEditModal(!editModal);
 
-  const handleClose = () => {
-    setOpen({edit:false, view:false})
-  }
-
-  /* function to delete a document from firstore */ 
   const handleDelete = async () => {
-    const taskDocRef = doc(db, 'tasks', id)
+    const taskDocRef = doc(db, 'notes', id)
     try{
       await deleteDoc(taskDocRef)
     } catch (err) {
@@ -23,48 +23,78 @@ function Note({id, title, category, content}) {
   }
 
   return (
+    <>
     <div className='task'>
-
       <div className='task__body'>
         <h2>{title}</h2>
-        <p>{category}</p>
+        <p><em>{category}</em></p>
         <p>{content}</p>
         <div className='task__buttons'>
           <div className='task__deleteNedit'>
-            <button 
-              className='task__editButton' 
-              onClick={() => setOpen({...open, edit : true})}>
-              Edit
-            </button>
+            <Button 
+              className='task__editButton'
+              onClick={neToggle}>
+              Edit Note
+            </Button>
             <button className='task__deleteButton' onClick={handleDelete}>Delete</button>
           </div>
-          <button 
-            onClick={() => setOpen({...open, view: true})}>
-            View
-          </button>
+          <Button onClick={toggle}>
+            View Note
+          </Button>
         </div>
       </div>
-
-      {open.view &&
-        <NoteItem 
-          onClose={handleClose} 
-          title={title} 
-          category={category}
-          content={content} 
-          open={open.view} />
-      }
-
-      {open.edit &&
-        <EditNote 
-          onClose={handleClose} 
-          toEditTitle={title} 
-          toEditCategory={category}
-          toEditContent={content} 
-          open={open.edit}
-          id={id} />
-      }
-
+      <Draggable>
+        <Modal 
+            size="lg" 
+            style={{
+                maxWidth: '950px', 
+                width: '100%'
+            }}
+            isOpen={modal} 
+            toggle={toggle}
+        >
+          <ModalHeader toggle={toggle}>{title}</ModalHeader>
+          <ModalBody>
+            <NoteItem
+              title={title}
+              category={category}
+              content={content}
+            />
+          </ModalBody>
+          <ModalFooter>
+            <Button className='btn btn-danger' onClick={toggle}>
+              Close
+            </Button>
+          </ModalFooter>
+        </Modal>
+    </Draggable> 
+    <Draggable>
+      <Modal 
+        size="lg" 
+        style={{
+            maxWidth: '950px', 
+            width: '100%'
+        }}
+        isOpen={editModal} 
+        neToggle={neToggle}
+      >
+        <ModalHeader neToggle={neToggle}>Edit Note</ModalHeader>
+        <ModalBody>
+          <EditNote
+           toEditTitle={title} 
+           toEditCategory={category}
+           toEditContent={content} 
+           id={id} />
+        </ModalBody>
+        <ModalFooter>
+          <Button className='btn btn-danger' onClick={neToggle}>
+            Close
+          </Button>
+        </ModalFooter>
+      </Modal>
+    </Draggable>  
     </div>
+    </>
   )
 }
 

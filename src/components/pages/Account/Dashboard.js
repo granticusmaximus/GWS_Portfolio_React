@@ -9,7 +9,7 @@ function Dashboard() {
             <br/>
             <SideBar/>
             <Container>
-                <div className="Dashboard content">
+                <div className="content">
                     <Row>
                         <Col>
                             <h2>
@@ -49,13 +49,7 @@ function Dashboard() {
                     </Row>
                 </div>
             </Container>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+
         </>
     );
 }

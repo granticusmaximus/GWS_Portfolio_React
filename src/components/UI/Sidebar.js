@@ -10,9 +10,6 @@ import '../../assets/css/Sidebar.css'
 const Sidebar = () => {
   const navigate = useNavigate();
   const [user, loading] = useAuthState(auth);
-  const backToDashboard = () => {
-    navigate('/dashboard')
-  }
   useEffect(() => {
       if (loading) {
         <Dna
@@ -42,12 +39,6 @@ const Sidebar = () => {
         >
           Logout
         </Button>
-      <hr/>
-      <Button 
-        onClick={(e) => backToDashboard()}
-      >
-        Back to Dashboard
-      </Button>
       <hr/>
     </div>
   );

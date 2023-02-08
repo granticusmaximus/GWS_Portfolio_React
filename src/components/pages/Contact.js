@@ -1,10 +1,9 @@
 import React, { useRef } from "react"
-import { Card, Container } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import emailjs from '@emailjs/browser'
 import { useNavigate } from "react-router-dom"
 import logo from '../../assets/img/logo.png'
 import {Helmet} from "react-helmet"
-import {Row, Col} from 'react-bootstrap'
 import '../../assets/css/contact.css'
 
 const Contact = () => {

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e84e2028.css",
-    "main.js": "/static/js/main.09fdff07.js",
+    "main.css": "/static/css/main.ab4fae6c.css",
+    "main.js": "/static/js/main.e9dbe680.js",
     "static/js/787.1deaa4d5.chunk.js": "/static/js/787.1deaa4d5.chunk.js",
     "static/media/hostingwithlogo.jpg": "/static/media/hostingwithlogo.826877c4a96abe06e7dc.jpg",
     "static/media/head.png": "/static/media/head.b0ea4a086561866eaca6.png",
@@ -14,6 +14,7 @@
     "static/media/MVCPattern.jpeg": "/static/media/MVCPattern.db14af678d49bfb8013e.jpeg",
     "static/media/reedyville.png": "/static/media/reedyville.7c83830effa241372c60.png",
     "static/media/gwstodo.png": "/static/media/gwstodo.c6e3e343acea63e4cc3d.png",
+    "static/media/note_man.png": "/static/media/note_man.dcb6272eb286d48bf92d.png",
     "static/media/SoftwareDeveloper.jpeg": "/static/media/SoftwareDeveloper.2efa62d7a48ad30713d6.jpeg",
     "static/media/CSharpFundamentals.jpeg": "/static/media/CSharpFundamentals.b2fb42f39a11fe2a12b6.jpeg",
     "static/media/CSharpBasics.jpeg": "/static/media/CSharpBasics.03a56b89c332c152fc1b.jpeg",
@@ -39,12 +40,12 @@
     "static/media/nodejs.png": "/static/media/nodejs.bd39b1acb820d18a3fcd.png",
     "static/media/jslogo.png": "/static/media/jslogo.697f129ddc2861ef4c55.png",
     "index.html": "/index.html",
-    "main.e84e2028.css.map": "/static/css/main.e84e2028.css.map",
-    "main.09fdff07.js.map": "/static/js/main.09fdff07.js.map",
+    "main.ab4fae6c.css.map": "/static/css/main.ab4fae6c.css.map",
+    "main.e9dbe680.js.map": "/static/js/main.e9dbe680.js.map",
     "787.1deaa4d5.chunk.js.map": "/static/js/787.1deaa4d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e84e2028.css",
-    "static/js/main.09fdff07.js"
+    "static/css/main.ab4fae6c.css",
+    "static/js/main.e9dbe680.js"
   ]
 }

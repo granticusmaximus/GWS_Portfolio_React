@@ -1,10 +1,12 @@
 import {useState} from 'react'
+import ReactQuill from 'react-quill'
+import 'react-quill/dist/quill.snow.css'
 import {db} from "../../../services/fb_commands"
+import {Button} from 'reactstrap'
+import styled from 'styled-components'
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
-import { useNavigate } from "react-router-dom";
 
-function AddNote({onClose, open}) {
-  const navigate = useNavigate();
+function AddNote() {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
   const [category, setCategory] = useState("")
@@ -19,16 +21,19 @@ function AddNote({onClose, open}) {
         category: category,
         created: Timestamp.now()
       })
-      navigate("/notes")
     } catch (err) {
       alert(err)
     }
   }
 
+const CustomQuill = styled(ReactQuill)`
+  height: 200px;
+`;
+
   return (
-    <>
-        <div className="container">
-          <form onSubmit={handleSubmit} className='form' name='addTask'>
+        <div className='taskManager'>
+          <div>
+          <form onSubmit={handleSubmit} className='addForm' name='addTask'>
             <div class="form-group">
               <label for="fromName">Title</label>
                 <input 
@@ -52,21 +57,21 @@ function AddNote({onClose, open}) {
                 />
             </div>
             <div class="form-group">
-              <label for="email_body">Message</label>
-                <textarea 
-                  onChange={(e) => setContent(e.target.value)}
-                  placeholder='Enter task decription'
-                  class="form-control"
-                  rows="5"
-                  value={content}
-                ></textarea>
+              <label for="content">Enter Content</label>
+                <CustomQuill 
+                  theme='snow'
+                  value={content} 
+                  onChange={(value) => setContent(value)} 
+                />
             </div>
-            <button type='submit' class="btn btn-primary">
-              Done
-            </button>
+            <br />
+            <hr />
+            <Button type='submit' class="btn btn-primary">
+              Save Note
+            </Button>
           </form> 
+          </div>
       </div>
-    </>
 
   )
 }

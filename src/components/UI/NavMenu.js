@@ -8,6 +8,7 @@ import { Dna } from 'react-loader-spinner'
 import { signOut } from "firebase/auth"
 import { auth } from "../../services/fb_commands"
 import { useAuthState } from "react-firebase-hooks/auth"
+import BlogNav from './BlogNav'
 
 const NavMenu = (props) => {
   const [user, loading] = useAuthState(auth);
@@ -25,10 +26,6 @@ const NavMenu = (props) => {
         return;
       }
     }, [user, loading]);
-
-  const logout = () => {
-      signOut(auth);
-  };
   return (
     <>
     {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (

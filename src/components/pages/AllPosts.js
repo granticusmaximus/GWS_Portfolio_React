@@ -50,8 +50,25 @@ export default function AllPosts() {
      </Helmet>
     <div className="bg-green-100 min-h-screen p-12">
       <div className="container mx-auto">
-        <h2 className="text-5xl flex justify-center cursive">Blog Posts</h2>
-        <h3 className="text-lg text-gray-600 flex justify-center mb-12">
+        <h1 
+          className="text-5xl flex justify-center cursive"
+          style={
+            {
+              color:'#bd5500',
+              fontFamily: 'Brush Script MT'
+            }
+          }
+        >
+          Blog Posts
+        </h1>
+        <h3 
+          className="text-lg text-gray-600 flex justify-center mb-12"
+          style={
+            {
+              fontFamily: 'Brush Script MT'
+            }
+          }
+        >
           Welcome to my blog posts page!
         </h3>
         <div className="grid md:grid-cols-2 grid-cols-3 gap-8">
