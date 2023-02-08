@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import head from '../../assets/img/head.png';
+import React from 'react'
+import head from '../../assets/img/head.png'
 import logo from '../../assets/img/logo.png'
 import Image from "react-bootstrap/Image"
 import pdf from '../../assets/pdf/gwresume.pdf'
+import { Row, Col } from "react-bootstrap"
 
-class Header extends Component {
-  render() {
-    return (
+const Header = () => {
+  return (
       <article
         className="article"
         style={
@@ -29,23 +29,57 @@ class Header extends Component {
             }
           }
         >
-          Welcome to my website!
+          Welcome to my portfolio!
         </h3>
         <h2
           style={
             {
               color: 'white',
               backgroundColor: '#5a523e',
-              padding: '10px'
+              padding: '9px'
             }
           }
         >
-          If you have not guessed it, my name is Grant Watson and I am a freelance software engineer for hire. To see my resume:
+          My name is Grant Watson and I am a software engineer!
         </h2>
-        <a href={pdf} rel="noreferrer" target="_blank" className="btn btn-primary">Click Here</a>
+        <Row>
+          <Col>
+            <a href={pdf} 
+              rel="noreferrer" 
+              target="_blank" 
+              className="btn btn-warning"
+              style={
+                {"width" : "200px"}
+              }
+            >
+                View My Resume
+            </a>
+          </Col>
+          <Col>
+            <a href='/projects' 
+              rel="noreferrer"
+              className="btn btn-warning"
+              style={
+                {"width" : "200px"}
+              }
+            >
+                View My Portfolio
+            </a>
+          </Col>
+          <Col>
+            <a href='/contact' 
+              rel="noreferrer"
+              className="btn btn-warning"
+              style={
+                {"width" : "200px"}
+              }
+            >
+                Contact me
+            </a>
+          </Col>
+        </Row>
     </article>
-    );
-  }
+  );
 }
 
 export default Header;

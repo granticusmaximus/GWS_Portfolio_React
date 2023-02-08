@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.599067ed.css",
-    "main.js": "/static/js/main.c0bf7e63.js",
-    "static/js/988.c7237aaa.chunk.js": "/static/js/988.c7237aaa.chunk.js",
+    "main.css": "/static/css/main.ab4fae6c.css",
+    "main.js": "/static/js/main.e9dbe680.js",
+    "static/js/787.1deaa4d5.chunk.js": "/static/js/787.1deaa4d5.chunk.js",
+    "static/media/hostingwithlogo.jpg": "/static/media/hostingwithlogo.826877c4a96abe06e7dc.jpg",
     "static/media/head.png": "/static/media/head.b0ea4a086561866eaca6.png",
     "static/media/carbuddys.png": "/static/media/carbuddys.204ace00053cb4a8e066.png",
     "static/media/reactTheme.png": "/static/media/reactTheme.d6ed5a3f2bea89a60f17.png",
@@ -11,8 +12,9 @@
     "static/media/adelsa.png": "/static/media/adelsa.a93f03f27250f89b7a9f.png",
     "static/media/ReactJSCourse.jpeg": "/static/media/ReactJSCourse.19d493479ad55c6e47ce.jpeg",
     "static/media/MVCPattern.jpeg": "/static/media/MVCPattern.db14af678d49bfb8013e.jpeg",
-    "static/media/gwresume.pdf": "/static/media/gwresume.ecde876b2f589faf4da1.pdf",
     "static/media/reedyville.png": "/static/media/reedyville.7c83830effa241372c60.png",
+    "static/media/gwstodo.png": "/static/media/gwstodo.c6e3e343acea63e4cc3d.png",
+    "static/media/note_man.png": "/static/media/note_man.dcb6272eb286d48bf92d.png",
     "static/media/SoftwareDeveloper.jpeg": "/static/media/SoftwareDeveloper.2efa62d7a48ad30713d6.jpeg",
     "static/media/CSharpFundamentals.jpeg": "/static/media/CSharpFundamentals.b2fb42f39a11fe2a12b6.jpeg",
     "static/media/CSharpBasics.jpeg": "/static/media/CSharpBasics.03a56b89c332c152fc1b.jpeg",
@@ -21,6 +23,7 @@
     "static/media/grantnwife.jpeg": "/static/media/grantnwife.38c4ea0142c4d2e67a9e.jpeg",
     "static/media/viralhtmlpage.png": "/static/media/viralhtmlpage.761cde0faf5ba872a67f.png",
     "static/media/logo.png": "/static/media/logo.aaab37fbb0bb04a92159.png",
+    "static/media/gwresume.pdf": "/static/media/gwresume.fa5bb39518044c2e1b0d.pdf",
     "static/media/cycleexchange.jpeg": "/static/media/cycleexchange.3139661a1a9a331e3d85.jpeg",
     "static/media/ASPNETCoreBootcamp.jpg": "/static/media/ASPNETCoreBootcamp.a2b418f1d885bf581c46.jpg",
     "static/media/python.png": "/static/media/python.bf9c62d5bb3def78e795.png",
@@ -37,12 +40,12 @@
     "static/media/nodejs.png": "/static/media/nodejs.bd39b1acb820d18a3fcd.png",
     "static/media/jslogo.png": "/static/media/jslogo.697f129ddc2861ef4c55.png",
     "index.html": "/index.html",
-    "main.599067ed.css.map": "/static/css/main.599067ed.css.map",
-    "main.c0bf7e63.js.map": "/static/js/main.c0bf7e63.js.map",
-    "988.c7237aaa.chunk.js.map": "/static/js/988.c7237aaa.chunk.js.map"
+    "main.ab4fae6c.css.map": "/static/css/main.ab4fae6c.css.map",
+    "main.e9dbe680.js.map": "/static/js/main.e9dbe680.js.map",
+    "787.1deaa4d5.chunk.js.map": "/static/js/787.1deaa4d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.599067ed.css",
-    "static/js/main.c0bf7e63.js"
+    "static/css/main.ab4fae6c.css",
+    "static/js/main.e9dbe680.js"
   ]
 }

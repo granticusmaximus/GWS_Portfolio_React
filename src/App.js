@@ -7,67 +7,50 @@ import Footer from './components/UI/Footer'
 import Home from './components/pages/Home'
 import About from './components/pages/About'
 import Contact from './components/pages/Contact'
-import Project from './components/pages/Projects'
+import Portfolio from './components/pages/Portfolio'
 import AllPosts from './components/pages/AllPosts'
 import OnePost from './components/pages/OnePost'
 import ThankYou from './components/pages/ThankYou'
-import Profile from './components/pages/Account/Profile'
-import Register from './components/pages/Account/Register'
-import Login from './components/pages/Account/Login'
-import VerifyEmail from './components/pages/Account/VerifyEmail'
-import { useState, useEffect } from 'react'
-import { AuthProvider } from './firebase/AuthContext'
-import { auth } from './firebase/firebase'
-import { onAuthStateChanged } from 'firebase/auth'
-import PrivateRoute from './components/pages/PrivateRoute'
-import { Navigate } from 'react-router-dom'
+import PurchaseThankYou from './components/pages/PurchaseThankYou'
+import GetStarted from './components/pages/Products/GetStarted'
+import Dashboard from './components/pages/Account/Dashboard'
+import Login from './components/pages/auth/Login'
+import Register from './components/pages/auth/Register'
+import Reset from './components/pages/auth/Reset'
+import NoteManager from './components/pages/Notes/NoteManager'
+import AddNote from './components/pages/Notes/AddNote'
+import EditNote from './components/pages/Notes/EditNote'
 import TaskManager from './components/pages/Tasks/TaskManager'
-
+import AddTask from './components/pages/Tasks/AddTask'
+import EditTask from './components/pages/Tasks/EditTask'
 
 function App() {
-  const [currentUser, setCurrentUser] = useState(null)
-  const [timeActive, setTimeActive] = useState(false)
-
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      setCurrentUser(user)
-    })
-  }, [])
-
   return (
-    <div>
+    <div class='app'>
       <br />
       <NavMenu />
       <Router>
-        <AuthProvider value={{ currentUser, timeActive, setTimeActive }}>
-          <Routes>
-            <Route exact path={ROUTES.HOME} element={<Home />} />
-            <Route path={ROUTES.ABOUT} element={<About />} />
-            <Route path={ROUTES.CONTACT} element={<Contact />} />
-            <Route path={ROUTES.PROJECTS} element={<Project />} />
-            <Route path={ROUTES.BLOG} element={<AllPosts />} />
-            <Route path={ROUTES.SINGLE_POST} element={<OnePost />} />
-            <Route path={ROUTES.THANK_YOU} element={<ThankYou />} />
-            <Route path={ROUTES.TASK_LIST} element={<TaskManager/>} />
-            <Route path={ROUTES.PROFILE} element={
-              <PrivateRoute>
-                <Profile />
-              </PrivateRoute>
-            } />
-            <Route path={ROUTES.LOGIN} element={
-              !currentUser?.emailVerified
-                ? <Login />
-                : <Navigate to={ROUTES.PROFILE} replace />
-            } />
-            <Route path={ROUTES.REGISTER} element={
-              !currentUser?.emailVerified
-                ? <Register />
-                : <Navigate to={ROUTES.PROFILE} replace />
-            } />
-            <Route path={ROUTES.VERIFY_EMAIL} element={<VerifyEmail />} />
-
-          </Routes>
-        </AuthProvider>
+        <Routes>
+          <Route exact path={ROUTES.HOME} element={<Home />} />
+          <Route path={ROUTES.ABOUT} element={<About />} />
+          <Route path={ROUTES.CONTACT} element={<Contact />} />
+          <Route path={ROUTES.PROJECTS} element={<Portfolio />} />
+          <Route path={ROUTES.BLOG} element={<AllPosts />} />
+          <Route path={ROUTES.SINGLE_POST} element={<OnePost />} />
+          <Route path={ROUTES.THANK_YOU} element={<ThankYou />} />
+          <Route path={ROUTES.PURCHASE_THANK_YOU} element={<PurchaseThankYou />} />
+          <Route path={ROUTES.GET_STARTED} element={<GetStarted />} />
+          <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
+          <Route path={ROUTES.REGISTER} element={<Register />} />
+          <Route path={ROUTES.LOGIN} element={<Login />} />
+          <Route path={ROUTES.RESET} element={<Reset />} />
+          <Route path={ROUTES.NOTE_LIST} element={<NoteManager />} />
+          <Route path={ROUTES.ADD_NOTE} element={<AddNote />} />
+          <Route path={ROUTES.EDIT_NOTE} element={<EditNote />} />
+          <Route path={ROUTES.TODO} element={<TaskManager />} />
+          <Route path={ROUTES.ADD_TASK} element={<AddTask />} />
+          <Route path={ROUTES.EDIT_TASK} element={<EditTask />} />
+        </Routes>
       </Router>
       <div className='bottom'>
         <Footer />
@@ -75,8 +58,5 @@ function App() {
     </div>
   );
 }
-
-
-
 
 export default App;

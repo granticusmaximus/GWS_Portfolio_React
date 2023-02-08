@@ -1,0 +1,45 @@
+{
+  "name": "gwsblog2",
+  "private": true,
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)",
+  "main": "package.json",
+  "author": "Grant Watson <gwatson117@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "build": "sanity build"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@andre-brdoch/sanity-plugin-schema-inspector": "^1.5.0",
+    "@portabletext/react": "^2.0.1",
+    "@sanity/cli": "^3.2.6",
+    "@sanity/code-input": "^2.36.0",
+    "@sanity/dashboard": "^2.36.0",
+    "@sanity/default-layout": "^2.35.5",
+    "@sanity/eslint-config-studio": "^2.0.1",
+    "@sanity/scheduled-publishing": "^1.1.1",
+    "@sanity/vision": "^3.2.6",
+    "eslint": "^8.33.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sanity": "^3.2.6",
+    "sanity-plugin-asset-source-pexels": "^0.0.2",
+    "sanity-plugin-asset-source-unsplash": "^1.0.6",
+    "sanity-plugin-bynder-input": "^1.4.1",
+    "sanity-plugin-icon-picker": "^2.0.2",
+    "sanity-plugin-markdown": "^1.0.1",
+    "sanity-plugin-media": "^1.5.1",
+    "sanity-plugin-position-input": "^1.0.4",
+    "sanity-plugin-social-preview": "^0.1.5",
+    "styled-components": "^5.3.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/granticusmaximus/GWS-Redesign-In-React.git"
+  }
+}
