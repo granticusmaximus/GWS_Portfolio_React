@@ -23,6 +23,7 @@ import EditNote from './components/pages/Notes/EditNote'
 import TaskManager from './components/pages/Tasks/TaskManager'
 import AddTask from './components/pages/Tasks/AddTask'
 import EditTask from './components/pages/Tasks/EditTask'
+import BlogList from './components/pages/Articles/BlogList'
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
           <Route path={ROUTES.TODO} element={<TaskManager />} />
           <Route path={ROUTES.ADD_TASK} element={<AddTask />} />
           <Route path={ROUTES.EDIT_TASK} element={<EditTask />} />
+          <Route path={ROUTES.ARTICLES} element={<BlogList/>} />
         </Routes>
       </Router>
       <div className='bottom'>
