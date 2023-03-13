@@ -1,12 +1,12 @@
-import React from 'react'
-import head from '../../assets/img/head.png'
+import React, { Component } from 'react';
+import head from '../../assets/img/head.png';
 import logo from '../../assets/img/logo.png'
 import Image from "react-bootstrap/Image"
 import pdf from '../../assets/pdf/gwresume.pdf'
-import { Row, Col } from "react-bootstrap"
 
-const Header = () => {
-  return (
+class Header extends Component {
+  render() {
+    return (
       <article
         className="article"
         style={
@@ -29,7 +29,7 @@ const Header = () => {
             }
           }
         >
-          Welcome to my portfolio!
+          Welcome to my website!
         </h3>
         <h2
           style={
@@ -40,46 +40,12 @@ const Header = () => {
             }
           }
         >
-          My name is Grant Watson and I am a software engineer!
+          My name is Grant Watson and I am a freelance software engineer for hire. To see my resume:
         </h2>
-        <Row>
-          <Col>
-            <a href={pdf} 
-              rel="noreferrer" 
-              target="_blank" 
-              className="btn btn-warning"
-              style={
-                {"width" : "200px"}
-              }
-            >
-                View My Resume
-            </a>
-          </Col>
-          <Col>
-            <a href='/projects' 
-              rel="noreferrer"
-              className="btn btn-warning"
-              style={
-                {"width" : "200px"}
-              }
-            >
-                View My Portfolio
-            </a>
-          </Col>
-          <Col>
-            <a href='/contact' 
-              rel="noreferrer"
-              className="btn btn-warning"
-              style={
-                {"width" : "200px"}
-              }
-            >
-                Contact me
-            </a>
-          </Col>
-        </Row>
+        <a href={pdf} rel="noreferrer" target="_blank" className="btn btn-primary">Click Here</a>
     </article>
-  );
+    );
+  }
 }
 
 export default Header;
