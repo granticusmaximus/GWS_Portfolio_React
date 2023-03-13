@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
               (478) 733-5239
             </p>
             <p>
-              grant@gwsapp.net
+              gwatson117@gmail.com
             </p>
               
            
@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="col-sm-4">
             <center>
               <p>
-                <a href='/contact' className="btn btn-dark" rel="noreferrer" target="_blank">Send Me an Email</a>
+                <a href='/contact' className="btn btn-outline-dark" rel="noreferrer" target="_blank">Send Me an Email</a>
               </p>
               <p>
                 <a href="https://twitter.com/granticusdev" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-twitter"></ion-icon></a>

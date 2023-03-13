@@ -1,43 +1,29 @@
 import React, { Component } from 'react';
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap';
 import pdf from '../../assets/pdf/gwresume.pdf'
 import aboutPic from '../../assets/img/grantnwife.jpeg'
-import CertificateGrid from '../UI/CertificateGrid'
+import CertificateGrid from '../UI/CertificateGrid';
 import { ImageViewer } from "react-image-viewer-dv"
-import logo from '../../assets/img/logo.png'
-import {Helmet} from "react-helmet"
-import WorkTimeLine from '../UI/WorkTimeline'
+
 
 class About extends Component {
   render() {
     return (
       <div>
-        <Helmet>
-            <title>GWS : About</title>
-            <meta charset="utf-8" />
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <meta name="csrf_token" content="" />
-            <meta property="type" content="website" />
-            <meta property="og:image" content={logo} data-react-helmet="true"/>
-            <meta property="og:image:secure_url" content={logo} data-react-helmet="true"/>
-        </Helmet>
         <center>
           <br/>
           <hr/>
           <center>
-            <div class="sec-title">
-              <div class="title">Who is Grant Watson?</div>
-            </div>
-            
+            <h1>
+              About Grant Watson 
+            </h1>
+            <a href={pdf} rel="noreferrer" target="_blank" className="btn btn-outline-primary">Click here to view my resume</a>
           </center>
           <hr />
           <Container>
             <Row>
               <Col>
-                <ImageViewer>
-                  <img className='image' src={aboutPic} width={400} />
-                </ImageViewer>
-                <p className='para'>
+                <p>
                   I started my journey as a software engineer while I was working at Wayne Reaves Software in Macon, GA as a call center representative for the web development staff. At the time,
                   there were three individuals that worked the phones, and I was one of them.We trained our clients on how to utilize the software we provided to upload vehicles to their site and 
                   how to market their vehicles to the public.The jobs of myself and the two other individuals transformed into a position that not only allowed us to work with customers to train, 
@@ -51,12 +37,13 @@ class About extends Component {
                   certified with CompTIA Security+, and if you wish to verify my certification there, I can provide you my cert number.
                 </p>
               </Col>
+              <Col>
+                <ImageViewer>
+                  <img src={aboutPic} width={400} />
+                </ImageViewer>
+              </Col>
             </Row>
           </Container>
-          <WorkTimeLine />
-          <a href={pdf} rel="noreferrer" target="_blank" className="btn btn-outline-primary">Click here to view my full resume</a>
-          <br />
-          <hr />
           <Row>
             <div className='jumbotron jumbotron-fluid'>
               <h3 style={{ color: 'white' }}>

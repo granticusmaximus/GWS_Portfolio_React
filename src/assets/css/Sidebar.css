@@ -1,16 +1,33 @@
 .aside {
-    width: 200px;
-    top: 0px;
-    left: 0px;
-    float:left;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    height: 100%;
     border-right: 1px solid rgb(199, 199, 199);
     padding: 1rem;
     background-color: #f1f3f8;
-    border-right: 3px solid #94633b;
-    padding-top: 10px;
-    height: auto;
-    box-shadow: 0px 0px 4px hsl(210deg 12% 75%);
+    border: 0px;
+    box-shadow: 0px 0px 40px 0px rgba(1, 0, 4, 0.36);
+}
+
+.asidedark {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    border-right: 1px solid rgb(199, 199, 199);
+    padding: 1rem;
+    background-color: #191f3a;
+    border: 0px;
+    box-shadow: 0px 0px 40px 0px rgba(1, 0, 4, 0.36);
+}
+
+
+
+
+.aside h2 {
+    font-size: var(--textSize);
+    font-weight: 500;
 }
