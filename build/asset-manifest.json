@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.49612873.css",
-    "main.js": "/static/js/main.b9d65ccc.js",
+    "main.css": "/static/css/main.5c05b202.css",
+    "main.js": "/static/js/main.b8fe3b36.js",
     "static/js/787.1deaa4d5.chunk.js": "/static/js/787.1deaa4d5.chunk.js",
     "static/media/hostingwithlogo.jpg": "/static/media/hostingwithlogo.826877c4a96abe06e7dc.jpg",
     "static/media/head.png": "/static/media/head.b0ea4a086561866eaca6.png",
@@ -13,6 +13,7 @@
     "static/media/ReactJSCourse.jpeg": "/static/media/ReactJSCourse.19d493479ad55c6e47ce.jpeg",
     "static/media/MVCPattern.jpeg": "/static/media/MVCPattern.db14af678d49bfb8013e.jpeg",
     "static/media/reedyville.png": "/static/media/reedyville.7c83830effa241372c60.png",
+    "static/media/passgen.png": "/static/media/passgen.4b8ef847b74b717a453f.png",
     "static/media/gwstodo.png": "/static/media/gwstodo.c6e3e343acea63e4cc3d.png",
     "static/media/note_man.png": "/static/media/note_man.dcb6272eb286d48bf92d.png",
     "static/media/SoftwareDeveloper.jpeg": "/static/media/SoftwareDeveloper.2efa62d7a48ad30713d6.jpeg",
@@ -23,12 +24,12 @@
     "static/media/grantnwife.jpeg": "/static/media/grantnwife.38c4ea0142c4d2e67a9e.jpeg",
     "static/media/viralhtmlpage.png": "/static/media/viralhtmlpage.761cde0faf5ba872a67f.png",
     "static/media/logo.png": "/static/media/logo.aaab37fbb0bb04a92159.png",
-    "static/media/gwresume.pdf": "/static/media/gwresume.fa5bb39518044c2e1b0d.pdf",
     "static/media/cycleexchange.jpeg": "/static/media/cycleexchange.3139661a1a9a331e3d85.jpeg",
     "static/media/ASPNETCoreBootcamp.jpg": "/static/media/ASPNETCoreBootcamp.a2b418f1d885bf581c46.jpg",
     "static/media/python.png": "/static/media/python.bf9c62d5bb3def78e795.png",
     "static/media/react.png": "/static/media/react.5cc8143ebaf785357d0e.png",
     "static/media/php.png": "/static/media/php.fee0e71a3499beba5692.png",
+    "static/media/gwresume.pdf": "/static/media/gwresume.0ff4e0245e0245f68dac.pdf",
     "static/media/csharp.png": "/static/media/csharp.50c1a0c8a4f3a0461882.png",
     "static/media/ultimatepower.jpeg": "/static/media/ultimatepower.63ab2a97839b2ddcd71b.jpeg",
     "static/media/dotnetcore.png": "/static/media/dotnetcore.f3450d05732e86f05d35.png",
@@ -40,12 +41,12 @@
     "static/media/nodejs.png": "/static/media/nodejs.bd39b1acb820d18a3fcd.png",
     "static/media/jslogo.png": "/static/media/jslogo.697f129ddc2861ef4c55.png",
     "index.html": "/index.html",
-    "main.49612873.css.map": "/static/css/main.49612873.css.map",
-    "main.b9d65ccc.js.map": "/static/js/main.b9d65ccc.js.map",
+    "main.5c05b202.css.map": "/static/css/main.5c05b202.css.map",
+    "main.b8fe3b36.js.map": "/static/js/main.b8fe3b36.js.map",
     "787.1deaa4d5.chunk.js.map": "/static/js/787.1deaa4d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.49612873.css",
-    "static/js/main.b9d65ccc.js"
+    "static/css/main.5c05b202.css",
+    "static/js/main.b8fe3b36.js"
   ]
 }
