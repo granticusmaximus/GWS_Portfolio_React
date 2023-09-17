@@ -14,7 +14,12 @@
   align-items: center;
 }
 
-@mixin background($imgpath, $position: center, $repeat: no-repeat, $size: contain) {
+@mixin background(
+  $imgpath,
+  $position: center,
+  $repeat: no-repeat,
+  $size: contain
+) {
   background: {
     image: url($imgpath);
     position: $position;
